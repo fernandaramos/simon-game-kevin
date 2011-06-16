@@ -128,22 +128,22 @@ public class SimonProcessingSketch extends PApplet implements TuioListener {
 		}
 	}
 
-	// public void mouseMoved() {
-	// checkButtons();
-	// }
+/*	public void mouseMoved() {
+		checkButtons(mouseX, mouseY);
+	}
 
-	// public void mouseDragged() {
-	// checkButtons();
-	// }
+	public void mouseDragged() {
+		checkButtons(mouseX, mouseY);
+	}
 
-	// public void mousePressed() {
-	// if (overUnJoueur == true) {
-	// unJoueur = true;
-	// }
-	// if (overDeuxJoueurs == true) {
-	// deuxJoueurs = true;
-	// }
-	// }
+	public void mousePressed() {
+		if (overUnJoueur == true) {
+			unJoueur = true;
+		}
+		if (overDeuxJoueurs == true) {
+			deuxJoueurs = true;
+		}
+	}*/
 
 	void drawDashBoard() {
 		int secondes = (millis() - startTime) / 1000;
@@ -403,25 +403,6 @@ public class SimonProcessingSketch extends PApplet implements TuioListener {
 		else {
 			return SimonColors.NONE;
 		}		
-	}
-
-	private boolean overRed1(float mouseX, float mouseY) {
-		return mouseX > 512 && mouseX < 742 && mouseY > 100
-				&& mouseY < 300;
-	}
-
-	private boolean overGreen1(float mouseX, float mouseY) {
-		return mouseX > 282 && mouseX < 512 && mouseY > 100
-				&& mouseY < 300;
-	}
-
-	private boolean overCyan1(float mouseX, float mouseY) {
-		return mouseX > 282 && mouseX < 512 && mouseY > 300
-				&& mouseY < 500;
-	}
-
-	private boolean overYellow1(float mouseX, float mouseY) {
-		return mouseX > 512 && mouseX < 742 && mouseY > 300 && mouseY < 500;
 	}
 
 	public void keyPressed() {
